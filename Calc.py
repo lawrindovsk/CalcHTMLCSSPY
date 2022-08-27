@@ -10,12 +10,12 @@ class calculadora:
     def subtrair(self, num1, num2):
         return num1 - num2
 
-    def multiplcar(self, num1, num2):
+    def multiplicar(self, num1, num2):
         return num1 * num2
 
     def dividir(self, num1, num2):
         if num2 == 0:
-            return -1
+            return "Impossível dividir por zero!"
         else:
             return num1/num2
 
@@ -24,8 +24,8 @@ class calculadora:
             return 1
         elif expoente == 1:
             return base
-        else
-            return math.pow(base, expoentes)
+        else:
+            return math.pow(base, expoente)
 
     def raiz(self, num):
         if num < 0:
@@ -37,3 +37,10 @@ class calculadora:
         for i in range(11):
             resultado = resultado + "\n{} * {} = {}".format(num, i, int(num*i))
         return resultado
+
+
+
+
+
+
+
