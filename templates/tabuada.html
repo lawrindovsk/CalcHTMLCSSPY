@@ -1,27 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <link rel='stylesheet' type='text/css' href="{{url_for('static',filename='css/estilo.css')}}"/>
     <title>{{titulo}}</title>
 </head>
 <body>
- <form action="/tabuada" method="POST">
-    
+    <form action="/tabuada" method="POST">
+        <label for="number1">Número 01:</label>
+        <input type="number" name="num1" class="form-control" id="number1" placeholder="Informe um número"/>
 
-    <label> for="number1">Número 01:</label>
-    <input type="number" name="num1" class="form-control" id="number1" placeholder="Informe um Número">
-    <label> for="number2">Número 02:</label>
-    <input type="number" name="num1" class="form-control" id="number2" placeholder="Informe o segundo Número">
-    <button type="submit" class="botao">Tabuada</button>
-    
-    <label>{{resultado}}</label>
-
-
- </form>
-
+        <button type="submit" class="botao">Tabuada</button>
+        
+        <label id='result'>{{resultado}}</label>
+    </form>
+    <a href="/"><button type="submit" class="botao">Voltar</button></a>
 </body>
 </html>

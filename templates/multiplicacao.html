@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <link rel='stylesheet' type='text/css' href="{{url_for('static',filename='css/estilo.css')}}"/>
     <title>{{titulo}}</title>
 </head>
 <body>
- <form action="/multiplicacao" method="POST">
-    
+    <form action="/multiplicacao" method="POST">
+        <label for="number1">Número 01:</label>
+        <input type="number" name="num1" class="form-control" id="number1" placeholder="Informe um número"/>
 
-    <label> for="number1">Número 01:</label>
-    <input type="number" name="num1" class="form-control" id="number1" placeholder="Informe um Número">
-    <label> for="number2">Número 02:</label>
-    <input type="number" name="num1" class="form-control" id="number2" placeholder="Informe o segundo Número">
-    <button type="submit" class="botao">Multiplicação</button>
-    <label>{{resultado}}</label>
+        <label for="number2">Número 02:</label>
+        <input type="number" name="num2" class="form-control" id="number2" placeholder="Informe um número"/>
 
+        <button type="submit" class="botao">Multiplicar</button>
 
- </form>
-
+        <label id='result'>{{resultado}}</label>
+    </form>
+    <a href="/"><button type="submit" class="botao">Voltar</button></a>
 </body>
 </html>
